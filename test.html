@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <meta name="description" 
+          content="GeeksforGeeks Article">
+    <meta name="keywords" 
+          content="GeeksforGeeks,GfG,Article">
+    <meta name="author" 
+          content="Aakash Pawar">
+    <title>GfG</title>
+    <style>
+        body {
+            font-size: 20px;
+            margin: 20px;
+        }
+          
+        button {
+            font-size: 18px;
+        }
+    </style>
+</head>
+  
+<body>
+    <button onclick="GfGFunction()">
+      Click Here!
+  </button>
+  <br>
+    <div id="demo">
+        <h2>Content of Meta Tag<h2></div>
+    <script>
+        function GfGFunction() {
+            //   for (var i = 0; i < meta.length; i++) {
+                //     document.getElementById("demo").innerHTML +=
+                //       "name: <b>"+meta[i].name+"</b> and content: <b>"
+                    //     +meta[i].content+"</b><br>";
+                    //   }
+            const meta = document.getElementsByTagName("meta");
+            const metaToJSON = (form)=> {
+            const data = {};
+            for (var i = 0; i < form.length; i++) {
+                var item = form[i];
+                data[item.name] = item.content;
+            }
+            console.log(data)
+            return data;
+            }
+                    
+            metaToJSON(meta)
+            
+                }
+
+    </script>
+</body>
+</html>
