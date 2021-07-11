@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Card } from "./Card";
 import Logo from './logo.png'
 function App() {
-  const SERVER_ENDPOINT =  process.env.SERVER || 'http://localhost:5500/api/linkpreviewer';
+  const SERVER_ENDPOINT =  process.env.REACT_APP_SERVER || 'http://localhost:5500/api/linkpreviewer';
   const [text, setText] = useState('');
   const [data, setData] = useState('');
   const [isLoading, setIsLoading]= useState(false)
